@@ -14,12 +14,12 @@ void main(List<String> args) {
   int gong=Random().nextInt(2);
   if (gong==0) {
     life=life-arco+dfen;
-    print('life:$life');
+    print('❤$life');
     print(msgs[gong]);
   }
   if (gong==1) {
     life=life-crtc+dfen;
-    print('life:$life');
+    print('❤$life');
     print(msgs[gong]);
   }
 }
