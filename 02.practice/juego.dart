@@ -34,7 +34,7 @@ void main(List<String> args) {
     print('juck:❤ $juck');
     print(msgs[gong]);
     if (juck<1) {
-      print('GAME SET');
+      print('GAME SET. WE WON.');
       return;
     }
     if (jong<2) {
@@ -47,7 +47,7 @@ void main(List<String> args) {
       print(msgs[1]);
     }
     if (life<1) {
-      print('GAME SET');
+      print('GAME SET. WE LOST.');
       return;
     }
     game();
