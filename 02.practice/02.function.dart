@@ -33,7 +33,7 @@ void main(List<String> args) {
   // show('아직 신에게는 ${mina()} 남아있습니다.');
   // show('아직 신에게는 ${mina()} 남아있습니다.');
   show('이순신의 동명이인 부하 입부 이순신이 긴장해서 구구단을 외웠다.');
-  gugu(2);
+  gugu(9);
 }
   void gugu(int cval){
     print('$cval*${nb++}=${mult+=cval}');
