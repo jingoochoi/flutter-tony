@@ -33,20 +33,20 @@ void main(List<String> args) {
   // show('아직 신에게는 ${mina()} 남아있습니다.');
   // show('아직 신에게는 ${mina()} 남아있습니다.');
   show('이순신의 동명이인 부하 입부 이순신이 긴장해서 구구단을 외웠다.');
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
-  show(ipbu());
+  gugu();
 }
+  void gugu(){
+    print('9*${nb++}=${mult+=9}');
+    if (mult==81) {
+      return;
+    }
+    gugu();
+  }
   int ship=13;
   Function mina=()=>--ship;
   int mult=0;
-  Function ipbu=()=>mult+=9;
+  int nb=1;
+  // Function ipbu=()=>mult+=9;
   void jpbt(Function bomb){
     print('나는 일본 배다. 각오햇!!');
     bomb();
