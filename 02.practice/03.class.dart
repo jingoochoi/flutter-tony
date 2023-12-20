@@ -6,6 +6,10 @@ void main(List<String> args) {
     // 생성자메서드(){}->생성자는 클래스 사용 시 가장 먼저 호출
     // 메서드()
   // }
+  // 다트의 클래스 상속
+  // 부모 클래스의 모든 속성솨 메서드를 자식에서 사용코자 할 때 기본적으로 공유를 하도록 하는 장치
+  // 설정방법:class 클래스명 extends 부모클래스명{code}
+  // 부모의 멤버 필드가 초기화가 필요한 경우 상속을 받은 클래스 생성 시 반드시 부모를 먼저 호출하기 떄문에 부모의 값을 먼저 초기세팅해야 함
   // 클래스의 형은 클래스명이다.
   Dogs d1=Dogs();
   print('my dog name is ${d1.name}');
@@ -33,6 +37,8 @@ void main(List<String> args) {
   bb='bb';//if it was const, error(const must declare with 할당)
   print(aa);
   print(bb);
+  Cats c2=Cats('persian cat', 13, 'blue');
+  print('my cat is ${c2.name},age is ${c2.ages},roars ${c2.hear(c2.spec)},charater is ${c2.chrt}');
 }
 class Pets{
   final String spec;
@@ -49,6 +55,9 @@ class Pets{
         break;
       case 'dog':
         cval='mongmong';
+        break;
+      case 'prettydog':
+        cval='hphp';
         break;
       default:
         cval='animal';
@@ -72,7 +81,7 @@ class Dogs{
     return bite;
   }
 }
-class Cats{
+class Cats extends Pets{
   final name;
   final ages;
   final colo;
@@ -80,7 +89,7 @@ class Cats{
   // 초기화는 생성하는 코드에서 해준다
   // 이것을 해주도록 생성자를 설정한다
   // 생성자는 클래스와 이름이 같다
-  Cats(this.name,this.ages,this.colo){
+  Cats(this.name,this.ages,this.colo) : super('cat', 'introverted', 'fish'){//:super->initialize keyword(부모의 생성자 매서드와 동일함)
     print('codezone');
   }
   // 메서드
