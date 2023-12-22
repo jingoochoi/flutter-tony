@@ -4,6 +4,7 @@ void main(List<String> args) {
   // with 키워드 씀
   // 형식:mixin 클래스명{}//1.믹스인 전용 클래스
   //      mixin class 클래스명{}//2.개별 인스턴스 사용가능
+  //   믹스인 전용 클래스는 내부 생성자가 없어서 인스턴스 생성이 안 되는 것임
   // 믹스인 사용 클래스의 형식:class 클래스명 with 믹스인클래스,믹스인클래스,...{}//여러 개 씀
   Tess ts=Tess('테스형차', 'model3', 6350.0);
   print('electric car company name:${ts.name}');
