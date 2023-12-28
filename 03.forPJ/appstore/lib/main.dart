@@ -29,7 +29,7 @@ class StorePage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
                   Text(
@@ -39,10 +39,11 @@ class StorePage extends StatelessWidget {
                         fontSize: 20.0,
                         color: Colors.green),
                   ),
-                  Icon(
-                    Icons.woman,
-                    color: Colors.green,
-                  ),
+                  // Icon(
+                  //   Icons.woman,
+                  //   color: Colors.green,
+                  // ),
+                  Image.asset('logo.png',width: 30.0*2,),
                   Spacer(),
                   Text(
                     'Kids',
