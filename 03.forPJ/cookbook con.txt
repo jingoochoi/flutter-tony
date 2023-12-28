@@ -1,0 +1,28 @@
+widgets
+
+MaterialApp(
+    //android design format(CupertinoApp=ios design format)
+    appBar:Icons(button)*2(right)
+    home:Scaffold(
+        child:SafeArea(//핸드폰 기기별 조금씩 다른 상태바 영역에 패딩을 자동으로 넣어주는 위젯
+            child:Column(
+                child:row(
+                    children:[
+                        Text(title),
+                    ]
+                )
+                child:row(
+                    children:[
+                        Icons*4
+                    ]
+                )
+                image
+                Text
+                image
+                Text
+                image
+                Text
+            )
+        )
+    )
+)
