@@ -5,7 +5,7 @@ MaterialApp(
     appBar:Icons(button)*2(right)
     home:Scaffold(
         child:SafeArea(//핸드폰 기기별 조금씩 다른 상태바 영역에 패딩을 자동으로 넣어주는 위젯
-            child:Column(
+            child:ListView(//Column은 스크롤이 안 됨.따라서 ListView를 쓴다.
                 child:row(
                     children:[
                         Text(title),
