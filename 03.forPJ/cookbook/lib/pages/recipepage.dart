@@ -12,7 +12,19 @@ class Pago extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.yellow,
       appBar: _appBar(),
-      body: Column(children: [Titl()],),
+      body: Padding(
+        // 상하 및 좌우 대칭 여백 설정(symmetric.vertical(상하) or horizontal(양옆))
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: ListView(//scrollable column
+          children: [
+            Titl(),
+            Meno(),
+            Liso('coffee', '코fl 레시피'),
+            Liso('burger', '벅얼 레시피'),
+            Liso('pizza', '핏자 레시피'),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -25,7 +37,10 @@ AppBar _appBar() {
     backgroundColor: Colors.white,
     elevation: 1,
     leading: Icon(CupertinoIcons.text_justify),
-    title: Text("tony's golden recipe",style: TextStyle(color: Colors.pink),),
+    title: Text(
+      "tony's golden recipe",
+      style: TextStyle(color: Colors.pink),
+    ),
     actions: [
       Icon(
         CupertinoIcons.search,

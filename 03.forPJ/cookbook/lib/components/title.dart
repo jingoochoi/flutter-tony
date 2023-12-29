@@ -5,6 +5,9 @@ class Titl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('HELP YOURSELF',style: TextStyle(color: Colors.grey,fontSize: 30,fontWeight: FontWeight.bold),));
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Center(child: Text('HELP YOURSELF',style: TextStyle(color: Colors.grey,fontSize: 30,fontWeight: FontWeight.bold),)),
+    );
   }
 }
