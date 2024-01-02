@@ -1,0 +1,8 @@
+[소스빌드]
+1.cd 경로
+2.flutter build web
+3.빌드한 후 작업
+    1.build>web>index.html>base태그
+    <base href="http://127.0.0.1:5500/03.forPJ/cookbook/build/web/">
+    실제주소에 index.html 빼고 넣는다.
+    2.build>web>assets 밑의 이미지 폴더를 밖으로 꺼낸다(경로문제).
