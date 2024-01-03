@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profile/components/Header.dart';
+import 'package:profile/components/cunt.dart';
+import 'package:profile/components/draw.dart';
 import 'package:profile/theme.dart';
 
 void main() {
@@ -26,8 +28,16 @@ class Pago extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: Draw(), //드로워가 있을 경우 햄버거는 자동생성
       appBar: _appBar(),
-      body: Column(children: [Head()],),
+      body: Column(
+        children: [
+          SizedBox(height: 20,),
+          Head(),
+          SizedBox(height: 20,),
+          Cunt(),
+        ],
+      ),
     );
   }
 }
