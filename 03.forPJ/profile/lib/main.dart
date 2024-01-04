@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:profile/components/Header.dart';
+import 'package:profile/components/buttons.dart';
 import 'package:profile/components/cunt.dart';
 import 'package:profile/components/draw.dart';
+import 'package:profile/components/tab.dart';
 import 'package:profile/theme.dart';
 
 void main() {
@@ -36,6 +38,10 @@ class Pago extends StatelessWidget {
           Head(),
           SizedBox(height: 20,),
           Cunt(),
+          SizedBox(height: 20,),
+          Btbt(),
+          SizedBox(height: 20,),
+          Expanded(child: Tabo())//끝부분까지 확장 메서드
         ],
       ),
     );
