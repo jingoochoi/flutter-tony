@@ -12,7 +12,7 @@ class _TaboState extends State<Tabo> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [_widgetT(),Expanded(child:_widgetV())],
+      children: [_widgetT(), Expanded(child: _widgetV())],
     );
   }
 
@@ -27,9 +27,7 @@ class _TaboState extends State<Tabo> with SingleTickerProviderStateMixin {
   }
 
   Widget _widgetT() {
-    return TabBar(
-      controller: _tabController,
-      tabs: [
+    return TabBar(controller: _tabController, tabs: [
       Tab(
         icon: Icon(Icons.computer),
       ),
@@ -40,15 +38,45 @@ class _TaboState extends State<Tabo> with SingleTickerProviderStateMixin {
   }
 
   Widget _widgetV() {
-    return TabBarView(
-      controller: _tabController,
-      children: [
-      Container(
-        color: Colors.blue,
+    return TabBarView(controller: _tabController, children: [
+      // using gridview-정해진 이미지를 뿌린다
+      // 웹 상의 이미지-GridView.builder
+      GridView.builder(
+        // 그리드 위임-연결된 이미지를 하나씩 그리드에 배치한다
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        // 전체 아이템 개수 설정
+        itemCount: 42,
+        // item build
+        itemBuilder: (context, index) {
+          // debugPrint('$context/$index');
+          return Image.network('https://picsum.photos/id/${index + 1}/200/200');
+        },
       ),
-      Container(
-        color: Colors.red,
+      GridView.builder(
+        // 그리드 위임-연결된 이미지를 하나씩 그리드에 배치한다
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        // 전체 아이템 개수 설정
+        itemCount: 42,
+        // item build
+        itemBuilder: (context, index) {
+          // debugPrint('$context/$index');
+          return Image.network('https://picsum.photos/id/${index + 43}/200/200');
+        },
       )
+      // Container(
+      //   color: Colors.blue,
+      // ),
+      // Container(
+      //   color: Colors.red,
+      // )
     ]);
   }
 }
