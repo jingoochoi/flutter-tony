@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/logi',
       routes: {'/home': (context) => Home(), '/logi': (context) => Logi()},
-
       // router does not use home
       // home: ,
     );
