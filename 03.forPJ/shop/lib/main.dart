@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/comp/detail.dart';
 import 'package:shop/theme.dart';
 
 void main() {
@@ -26,8 +27,8 @@ class Cart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: Column(
-        children: [],
+      body: ListView(
+        children: [Mage()],
       ),
     );
   }
